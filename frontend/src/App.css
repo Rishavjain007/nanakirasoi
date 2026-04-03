@@ -1,0 +1,106 @@
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation utility classes */
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.slide-in-from-left {
+  animation: slideInLeft 0.8s ease-out both;
+}
+
+.slide-in-from-right {
+  animation: slideInRight 0.8s ease-out both;
+}
+
+/* ================= HOVER EFFECTS ================= */
+
+/* Images */
+img {
+  transition: transform 0.5s ease;
+}
+img:hover {
+  transform: scale(1.05);
+}
+
+/* Buttons + Links */
+button,
+a {
+  transition: all 0.3s ease;
+}
+
+/* Cards */
+.group {
+  transition: all 0.3s ease;
+}
+.group:hover {
+  transform: translateY(-5px);
+}
+
+/* ================= UTILITIES ================= */
+
+/* Line clamp */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Prevent weird center alignment */
+.App {
+  text-align: left;
+}
+
+/* Selection */
+::selection {
+  background-color: #ea580c;
+  color: #fff;
+}
+
+/* ================= PERFORMANCE ================= */
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
