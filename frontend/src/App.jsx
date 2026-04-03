@@ -8,6 +8,7 @@ import Donate from "./pages/Donate";
 import Gallery from "./pages/Gallery";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import StoryDetails from "./pages/StoryDetails";
 import Programs from "./pages/Programs";
 import Testimonials from "./pages/Testimonials";
 import Faqs from "./pages/Faqs";
@@ -32,6 +33,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/programs" element={<Programs />} />
             <Route path="/testimonials" element={<Testimonials />} />
+            <Route path="/story" element={<StoryDetails />} />
             <Route path="/faqs" element={<Faqs />} />
 
             {/* Fallback Route */}

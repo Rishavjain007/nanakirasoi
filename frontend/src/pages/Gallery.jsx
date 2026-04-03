@@ -1,110 +1,168 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 import { galleryImages } from '../data/mock';
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [currentIndex, setCurrentIndex] = useState(null);
+
+  const imagesPerPage = 10;
+
+  // Pagination
+  const totalPages = Math.ceil(galleryImages.length / imagesPerPage);
+
+  const startIndex = (currentPage - 1) * imagesPerPage;
+  const currentImages = galleryImages.slice(
+    startIndex,
+    startIndex + imagesPerPage
+  );
+
+  // 🔥 Next / Prev logic
+  const handleNext = () => {
+    const nextIndex = (currentIndex + 1) % galleryImages.length;
+    setCurrentIndex(nextIndex);
+    setSelectedImage(galleryImages[nextIndex]);
+  };
+
+  const handlePrev = () => {
+    const prevIndex =
+      (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+    setCurrentIndex(prevIndex);
+    setSelectedImage(galleryImages[prevIndex]);
+  };
+
+  // 🔥 Keyboard support
+  useEffect(() => {
+    const handleKey = (e) => {
+      if (!selectedImage) return;
+
+      if (e.key === 'ArrowRight') handleNext();
+      if (e.key === 'ArrowLeft') handlePrev();
+      if (e.key === 'Escape') setSelectedImage(null);
+    };
+
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [selectedImage, currentIndex]);
 
   return (
     <div className="min-h-screen pt-20 bg-gradient-to-br from-orange-50 via-white to-orange-50/30">
-      {/* Hero Section */}
-      <section className="py-20 md:py-28">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Our Impact in Pictures
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-              Witness the smiles, the hope, and the transformation we create every day
-            </p>
-          </div>
-        </div>
+
+      {/* Hero */}
+      <section className="py-20 text-center">
+        <h1 className="text-5xl font-bold mb-4">Our Impact in Pictures</h1>
+        <p className="text-gray-600 text-lg">
+          Witness the smiles and transformation
+        </p>
       </section>
 
-      {/* Gallery Grid */}
-      <section className="pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Gallery */}
+      <section className="pb-10">
+        <div className="container mx-auto px-4">
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {galleryImages.map((image, index) => (
+            {currentImages.map((image, index) => (
               <div
                 key={image.id}
-                className="group relative aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer"
-                onClick={() => setSelectedImage(image)}
-                style={{
-                  animationDelay: `${index * 100}ms`,
+                className="group relative aspect-square overflow-hidden rounded-xl shadow-lg cursor-pointer"
+                onClick={() => {
+                  setSelectedImage(image);
+                  setCurrentIndex(startIndex + index);
                 }}
               >
                 <img
                   src={image.url}
                   alt={image.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <h3 className="text-xl font-bold mb-2">{image.title}</h3>
-                    <p className="text-sm text-gray-200">{image.description}</p>
+
+                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition">
+                  <div className="absolute bottom-0 p-4 text-white">
+                    <h3 className="font-bold">{image.title}</h3>
+                    <p className="text-sm">{image.description}</p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
+
+          {/* Pagination */}
+          <div className="flex justify-center mt-10 gap-2 flex-wrap">
+            {Array.from({ length: totalPages }, (_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrentPage(i + 1)}
+                className={`px-4 py-2 rounded ${
+                  currentPage === i + 1
+                    ? 'bg-orange-600 text-white'
+                    : 'bg-gray-200'
+                }`}
+              >
+                {i + 1}
+              </button>
+            ))}
+          </div>
+
         </div>
       </section>
 
-      {/* Lightbox Modal */}
+      {/* 🔥 Lightbox */}
       {selectedImage && (
         <div
-          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4 animate-in fade-in duration-300"
+          className="fixed inset-0 bg-black/95 flex items-center justify-center z-50"
           onClick={() => setSelectedImage(null)}
         >
+
+          {/* Close */}
           <button
-            className="absolute top-4 right-4 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors duration-200"
+            className="absolute top-5 right-5 bg-white/20 w-12 h-12 rounded-full flex items-center justify-center"
             onClick={() => setSelectedImage(null)}
           >
-            <X className="w-6 h-6 text-white" />
+            <X className="text-white" />
           </button>
 
-          <div className="max-w-6xl w-full" onClick={(e) => e.stopPropagation()}>
+          {/* Prev */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              handlePrev();
+            }}
+            className="absolute left-5 top-1/2 -translate-y-1/2 text-white text-4xl"
+          >
+            ‹
+          </button>
+
+          {/* Image */}
+          <div onClick={(e) => e.stopPropagation()}>
             <img
               src={selectedImage.url}
               alt={selectedImage.title}
-              className="w-full h-auto max-h-[80vh] object-contain rounded-lg shadow-2xl"
+              className="max-h-[80vh] rounded-lg"
             />
-            <div className="mt-6 text-center">
-              <h3 className="text-2xl font-bold text-white mb-2">{selectedImage.title}</h3>
-              <p className="text-gray-300">{selectedImage.description}</p>
+
+            <div className="text-center text-white mt-4">
+              <h3 className="text-xl font-bold">{selectedImage.title}</h3>
+              <p>{selectedImage.description}</p>
+              <p className="text-sm text-gray-300 mt-2">
+                {currentIndex + 1} / {galleryImages.length}
+              </p>
             </div>
           </div>
+
+          {/* Next */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              handleNext();
+            }}
+            className="absolute right-5 top-1/2 -translate-y-1/2 text-white text-4xl"
+          >
+            ›
+          </button>
+
         </div>
       )}
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-600 to-orange-700">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-              Be Part of Our Story
-            </h2>
-            <p className="text-lg text-orange-100 mb-8">
-              Join us as a volunteer or donor and help us create more moments of joy
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/donate"
-                className="inline-flex items-center justify-center px-8 py-4 bg-white text-orange-600 font-semibold rounded-lg hover:bg-orange-50 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
-              >
-                Support Our Cause
-              </a>
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-orange-600 transition-all duration-300"
-              >
-                Volunteer With Us
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

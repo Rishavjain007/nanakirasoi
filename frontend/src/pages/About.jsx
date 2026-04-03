@@ -1,9 +1,13 @@
-import React from 'react';
-import { Target, Eye, Award, Users } from 'lucide-react';
-import { Card, CardContent } from '../components/ui/card';
-import { aboutData } from '../data/mock';
+import React from "react";
+import { Target, Eye, Award, Users } from "lucide-react";
+import { Card, CardContent } from "../components/ui/card";
+import { aboutData } from "../data/mock";
+import image2 from "../assets/image/b4.png";
+import { useNavigate } from "react-router-dom";
+
 
 const About = () => {
+    const navigate = useNavigate();
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
@@ -12,13 +16,16 @@ const About = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center space-x-2 bg-orange-100 px-4 py-2 rounded-full mb-6">
               <Users className="w-4 h-4 text-orange-600" />
-              <span className="text-orange-600 text-sm font-semibold">About Nanakirasoi</span>
+              <span className="text-orange-600 text-sm font-semibold">
+                About Nanakirasoi
+              </span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Serving Humanity with Compassion
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-              Every meal we serve carries the warmth of compassion and the promise of a better tomorrow
+              Every meal we serve carries the warmth of compassion and the
+              promise of a better tomorrow
             </p>
           </div>
         </div>
@@ -41,7 +48,9 @@ const About = () => {
                 <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center">
                   <Target className="w-6 h-6 text-orange-600" />
                 </div>
-                <h2 className="text-3xl font-bold text-gray-900">Our Mission</h2>
+                <h2 className="text-3xl font-bold text-gray-900">
+                  Our Mission
+                </h2>
               </div>
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
                 {aboutData.mission}
@@ -72,7 +81,7 @@ const About = () => {
               Every statistic represents lives touched and hope restored
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {aboutData.stats.map((stat, index) => (
               <Card
@@ -99,7 +108,9 @@ const About = () => {
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 bg-orange-100 px-4 py-2 rounded-full mb-6">
               <Award className="w-4 h-4 text-orange-600" />
-              <span className="text-orange-600 text-sm font-semibold">Our Values</span>
+              <span className="text-orange-600 text-sm font-semibold">
+                Our Values
+              </span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               What Drives Us Forward
@@ -140,28 +151,42 @@ const About = () => {
               <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-orange-600 mx-auto mb-8"></div>
             </div>
 
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
-              <p>
-                Nanakirasoi was born from a simple observation: while food waste is abundant in
-                some parts of our society, countless people struggle to get even one meal a day.
-                We started with just five volunteers and one community kitchen, serving 50 meals
-                a day.
-              </p>
-              <p>
-                What began as a small initiative has grown into a movement. Today, we operate
-                25+ distribution centers, serve over 2,000 meals daily, and have touched the
-                lives of thousands of families. But our journey is far from over.
-              </p>
-              <p>
-                Every meal we serve is prepared with the same care and love that you would for
-                your own family. We believe in serving with dignity – our beneficiaries are not
-                recipients of charity, but members of our extended family who are going through
-                difficult times.
-              </p>
-              <p className="font-semibold text-gray-900">
-                Our dream is simple yet ambitious: a world where no one goes to bed hungry, where
-                access to nutritious food is a reality for all, not a privilege for some.
-              </p>
+            <div className="max-w-5xl mx-auto">
+              <div className="grid md:grid-cols-2 bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border border-white/40">
+                {/* LEFT IMAGE */}
+                <div className="h-72 md:h-auto overflow-hidden">
+                  <img
+                    src={image2}
+                    alt="Story"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* RIGHT CONTENT */}
+                <div className="p-10 flex flex-col justify-center">
+                  <span className="bg-orange-100 text-orange-600 px-4 py-1 rounded-full text-sm font-semibold mb-4 w-fit">
+                    Featured Story
+                  </span>
+
+                  <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    The Story Behind{" "}
+                    <span className="text-orange-500">NanaKiRasoi</span>
+                  </h3>
+
+                  <p className="text-gray-600 mb-8 leading-relaxed">
+                    Some people remember childhood through places. I remember
+                    mine through kitchens. Growing up, the steady presence in my
+                    life came not from my parents, but from my grandparents...
+                  </p>
+
+                  <button
+                    onClick={() => navigate("/story")}
+                    className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-semibold transition w-fit shadow-md hover:scale-105"
+                  >
+                    Show More →
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -180,8 +205,8 @@ const About = () => {
               Join Us in Our Mission
             </h2>
             <p className="text-lg text-orange-100 mb-8">
-              Whether through donations, volunteering, or spreading awareness, you can be part
-              of this journey towards a hunger-free world.
+              Whether through donations, volunteering, or spreading awareness,
+              you can be part of this journey towards a hunger-free world.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
