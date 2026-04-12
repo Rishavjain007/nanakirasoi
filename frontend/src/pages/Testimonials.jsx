@@ -1,7 +1,7 @@
-import React from 'react';
-import { Heart, Quote } from 'lucide-react';
-import { Card, CardContent } from '../components/ui/card';
-import { testimonials } from '../data/mock';
+import React from "react";
+import { Heart, Quote } from "lucide-react";
+import { Card, CardContent } from "../components/ui/card";
+import { testimonials } from "../data/mock";
 
 const Testimonials = () => {
   return (
@@ -12,13 +12,16 @@ const Testimonials = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center space-x-2 bg-orange-100 px-4 py-2 rounded-full mb-6">
               <Heart className="w-4 h-4 text-orange-600" fill="currentColor" />
-              <span className="text-orange-600 text-sm font-semibold">Testimonials</span>
+              <span className="text-orange-600 text-sm font-semibold">
+                Testimonials
+              </span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Voices of Hope & Gratitude
+              Voices from Our Community
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-              Stories from the hearts of those we serve and those who serve with us
+              Reflections from the people who support, shape, and share in our
+              journey.
             </p>
           </div>
         </div>
@@ -62,88 +65,20 @@ const Testimonials = () => {
                       {testimonial.name.charAt(0)}
                     </div>
                     <div>
-                      <div className="font-bold text-gray-900">{testimonial.name}</div>
+                      <div className="font-bold text-gray-900">
+                        {testimonial.name}
+                      </div>
                       <div className="text-sm text-orange-600 font-medium">
                         {testimonial.role}
                       </div>
-                      <div className="text-xs text-gray-500">{testimonial.location}</div>
+                      <div className="text-xs text-gray-500">
+                        {testimonial.location}
+                      </div>
                     </div>
                   </div>
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Impact Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-              Every Story Matters
-            </h2>
-            <p className="text-lg text-gray-600 leading-relaxed mb-12">
-              These testimonials represent thousands of lives touched by the compassion of our
-              donors and the dedication of our volunteers. Each meal served is a story of hope,
-              dignity, and community.
-            </p>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  number: '98%',
-                  label: 'Satisfaction Rate',
-                  description: 'Beneficiaries satisfied with our services',
-                },
-                {
-                  number: '1,200+',
-                  label: 'Families Helped',
-                  description: 'Regular beneficiaries across all centers',
-                },
-                {
-                  number: '150+',
-                  label: 'Active Volunteers',
-                  description: 'Dedicated individuals serving daily',
-                },
-              ].map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-4xl md:text-5xl font-bold text-orange-600 mb-2">
-                    {stat.number}
-                  </div>
-                  <div className="text-lg font-semibold text-gray-900 mb-2">{stat.label}</div>
-                  <div className="text-sm text-gray-600">{stat.description}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Share Your Story Section */}
-      <section className="py-20 bg-gradient-to-br from-orange-50 to-orange-100/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <Card className="border-none shadow-2xl bg-white">
-              <CardContent className="p-8 md:p-12 text-center">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Heart className="w-8 h-8 text-orange-600" fill="currentColor" />
-                </div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                  Share Your Experience
-                </h2>
-                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                  Have you been touched by our work or volunteered with us? We'd love to hear
-                  your story and share it with our community.
-                </p>
-                <a
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold rounded-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
-                >
-                  Share Your Story
-                </a>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
@@ -158,11 +93,11 @@ const Testimonials = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-              Be Part of These Stories
+              Be Part of the Work Behind These Stories
             </h2>
             <p className="text-lg text-orange-100 mb-8">
-              Your support creates more success stories. Join us in our mission to feed hope and
-              change lives.
+              Your support helps us serve meals, strengthen communities, and
+              continue showing up with care where it matters most.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

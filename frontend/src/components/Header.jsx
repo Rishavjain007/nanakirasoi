@@ -54,10 +54,10 @@ const Header = () => {
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold text-gray-800 leading-tight">
-                Nanakirasoi
+                Nana Ki Rasoi
               </span>
               <span className="text-xs text-orange-600 font-medium">
-                Feeding Hope
+                Dignity in Every Meal
               </span>
             </div>
           </Link>

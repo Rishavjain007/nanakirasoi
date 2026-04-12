@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { X } from 'lucide-react';
-import { galleryImages } from '../data/mock';
+import React, { useState, useEffect } from "react";
+import { X } from "lucide-react";
+import { galleryImages } from "../data/mock";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -15,7 +15,7 @@ const Gallery = () => {
   const startIndex = (currentPage - 1) * imagesPerPage;
   const currentImages = galleryImages.slice(
     startIndex,
-    startIndex + imagesPerPage
+    startIndex + imagesPerPage,
   );
 
   // 🔥 Next / Prev logic
@@ -37,30 +37,30 @@ const Gallery = () => {
     const handleKey = (e) => {
       if (!selectedImage) return;
 
-      if (e.key === 'ArrowRight') handleNext();
-      if (e.key === 'ArrowLeft') handlePrev();
-      if (e.key === 'Escape') setSelectedImage(null);
+      if (e.key === "ArrowRight") handleNext();
+      if (e.key === "ArrowLeft") handlePrev();
+      if (e.key === "Escape") setSelectedImage(null);
     };
 
-    window.addEventListener('keydown', handleKey);
-    return () => window.removeEventListener('keydown', handleKey);
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
   }, [selectedImage, currentIndex]);
 
   return (
     <div className="min-h-screen pt-20 bg-gradient-to-br from-orange-50 via-white to-orange-50/30">
-
       {/* Hero */}
       <section className="py-20 text-center">
-        <h1 className="text-5xl font-bold mb-4">Our Impact in Pictures</h1>
+        <h1 className="text-5xl font-bold mb-4">Snapshots of Our Journey</h1>
         <p className="text-gray-600 text-lg">
-          Witness the smiles and transformation
+          What began as simple feeding drives for workers and underserved
+          communities has grown into a larger vision — permanent community
+          kitchens where no one has to choose between hunger and dignity.
         </p>
       </section>
 
       {/* Gallery */}
       <section className="pb-10">
         <div className="container mx-auto px-4">
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {currentImages.map((image, index) => (
               <div
@@ -95,15 +95,14 @@ const Gallery = () => {
                 onClick={() => setCurrentPage(i + 1)}
                 className={`px-4 py-2 rounded ${
                   currentPage === i + 1
-                    ? 'bg-orange-600 text-white'
-                    : 'bg-gray-200'
+                    ? "bg-orange-600 text-white"
+                    : "bg-gray-200"
                 }`}
               >
                 {i + 1}
               </button>
             ))}
           </div>
-
         </div>
       </section>
 
@@ -113,7 +112,6 @@ const Gallery = () => {
           className="fixed inset-0 bg-black/95 flex items-center justify-center z-50"
           onClick={() => setSelectedImage(null)}
         >
-
           {/* Close */}
           <button
             className="absolute top-5 right-5 bg-white/20 w-12 h-12 rounded-full flex items-center justify-center"
@@ -160,7 +158,6 @@ const Gallery = () => {
           >
             ›
           </button>
-
         </div>
       )}
     </div>

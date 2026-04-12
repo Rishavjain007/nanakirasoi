@@ -33,7 +33,7 @@ const Home = () => {
         <div className="absolute inset-0">
           <img
             src={heroData.image}
-            alt="Nanakirasoi volunteers"
+            alt="Nana Ki Rasoi volunteers"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
@@ -121,7 +121,7 @@ const Home = () => {
                 </span>
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                Building a Hunger-Free Tomorrow
+                More Than a Meal. A Place to Belong.
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 {aboutData.mission}
@@ -175,10 +175,10 @@ const Home = () => {
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              How We Make an Impact
+              How Nana Ki Rasoi Works
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our comprehensive approach ensures no one goes to bed hungry
+              We are building a dignity-first model of hunger relief rooted in warm meals, welcoming spaces, and community care.
             </p>
           </div>
 
@@ -186,21 +186,21 @@ const Home = () => {
             {[
               {
                 icon: Utensils,
-                title: "Daily Meals",
+                title: "Community Kitchens",
                 description:
-                  "Hot, nutritious meals served daily at 25+ distribution centers across cities",
+                  "We are building welcoming community kitchens where anyone can access a warm, nutritious meal in a space that feels respectful and safe.",
+              },
+              {
+                icon: TrendingUp,
+                title: "Dignity-First Meals",
+                description:
+                  "Our approach is rooted in dignity, not charity — creating spaces where people can sit, eat, and feel cared for, without judgment or exclusion.",
               },
               {
                 icon: Users,
                 title: "Community Support",
                 description:
-                  "Building strong communities through shared meals and volunteer programs",
-              },
-              {
-                icon: TrendingUp,
-                title: "Sustainable Impact",
-                description:
-                  "Long-term solutions including nutrition education and skill development",
+                  "Beyond meals, we respond to everyday needs through women-led livelihoods and small support initiatives such as clothing, hygiene, and educational essentials.",
               },
             ].map((item, index) => (
               <Card
@@ -236,10 +236,10 @@ const Home = () => {
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Stories That Inspire Us
+              What People Are Saying About Nana Ki Rasoi
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Hear from the people whose lives we've touched
+              Reflections from people who believe in our mission
             </p>
           </div>
 
@@ -305,11 +305,10 @@ const Home = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto fade-in-up">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-              Every Contribution Counts
+              Help Us Build a Place Where No One Eats Alone
             </h2>
             <p className="text-lg sm:text-xl text-orange-100 mb-10 leading-relaxed">
-              Your support can transform lives. Join us in our mission to create
-              a world where no one sleeps hungry.
+              Your support helps us serve warm meals with dignity, strengthen communities, and bring care to those who need it most.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               {/* Donate Button */}

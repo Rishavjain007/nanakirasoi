@@ -1,24 +1,24 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 import { Heart, Mail, Phone, MapPin } from "lucide-react";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { contactInfo } from '../data/mock';
+import { contactInfo } from "../data/mock";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { name: 'About Us', path: '/about' },
-    { name: 'Our Programs', path: '/programs' },
-    { name: 'Gallery', path: '/gallery' },
-    { name: 'Blog', path: '/blog' },
+    { name: "About Us", path: "/about" },
+    { name: "Our Programs", path: "/programs" },
+    { name: "Gallery", path: "/gallery" },
+    { name: "Blog", path: "/blog" },
   ];
 
   const supportLinks = [
-    { name: 'Donate', path: '/donate' },
-    { name: 'Volunteer', path: '/contact' },
-    { name: 'Testimonials', path: '/testimonials' },
-    { name: 'FAQs', path: '/faqs' },
+    { name: "Donate", path: "/donate" },
+    { name: "Volunteer", path: "/contact" },
+    { name: "Testimonials", path: "/testimonials" },
+    { name: "FAQs", path: "/faqs" },
   ];
 
   return (
@@ -33,13 +33,15 @@ const Footer = () => {
                 <Heart className="w-6 h-6 text-white" fill="currentColor" />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-bold text-white">Nanakirasoi</span>
+                <span className="text-xl font-bold text-white">
+                  Nanakirasoi
+                </span>
                 <span className="text-xs text-orange-400">Feeding Hope</span>
               </div>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Dedicated to eliminating hunger and bringing smiles to those in need.
-              Every meal we serve is a step towards a hunger-free world.
+              Community kitchens serving food, dignity, and hope, one meal at a
+              time.
             </p>
             {/* Social Media */}
             <div className="flex space-x-3 pt-2">
@@ -84,7 +86,9 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Quick Links</h3>
+            <h3 className="text-white font-semibold text-lg mb-4">
+              Quick Links
+            </h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.path}>
@@ -102,7 +106,9 @@ const Footer = () => {
 
           {/* Support Links */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Get Involved</h3>
+            <h3 className="text-white font-semibold text-lg mb-4">
+              Get Involved
+            </h3>
             <ul className="space-y-3">
               {supportLinks.map((link) => (
                 <li key={link.path}>
@@ -120,7 +126,9 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Contact Us</h3>
+            <h3 className="text-white font-semibold text-lg mb-4">
+              Contact Us
+            </h3>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3 text-sm text-gray-400">
                 <MapPin className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" />
@@ -154,9 +162,12 @@ const Footer = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-gray-400 text-center md:text-left">
-              © {currentYear} Nanakirasoi. All rights reserved. Made with{' '}
-              <Heart className="w-3 h-3 inline text-orange-400" fill="currentColor" /> for a
-              hunger-free world.
+              © {currentYear} Nana Ki Rasoi. All rights reserved. Made with{" "}
+              <Heart
+                className="w-3 h-3 inline text-orange-400"
+                fill="currentColor"
+              />{" "}
+              for a hunger-free world.
             </p>
             <div className="flex space-x-6 text-sm text-gray-400">
               <Link

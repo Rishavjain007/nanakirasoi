@@ -1,8 +1,8 @@
-import Hero from '../assets/image/b3.png'
+import Hero from "../assets/image/b3.png";
 export const heroData = {
-  title: "Feeding Hope, One Meal at a Time",
+  title: "Meals With Dignity. Hope On Every Plate.",
   subtitle:
-    "Join us in our mission to eliminate hunger and bring smiles to those in need",
+    "Nana ki Rasoi is a woman-led and run non-profit, creating inclusive community kitchens, where anyone can enjoy a nourishing meal and pay what they can.",
   image: Hero,
   cta: {
     primary: "Donate Now",
@@ -10,32 +10,31 @@ export const heroData = {
   },
 };
 
-import image1 from "../assets/image/b2.png"
+import image1 from "../assets/image/b2.png";
 export const aboutData = {
   mission:
-    "At Nanakirasoi, we believe no one should go to bed hungry. Our mission is to provide free, nutritious meals to underprivileged communities and bring hope to those facing food insecurity.",
-  vision:
-    "A world where every person has access to nutritious food and no one suffers from hunger.",
-  values: ["Compassion", "Integrity", "Community", "Dignity", "Service"],
+    "At Nana Ki Rasoi, we are working to build community kitchens where anyone can access a warm, nutritious meal in a space that feels welcoming, respectful, and human. We believe hunger is not just about food; it is also about dignity, comfort, and the need to feel cared for. Our mission is to make hunger relief more humane, one meal at a time.",
+  vision: " A world where no one has to choose between hunger and dignity.",
+  values: ["Compassion", "Dignity", "Community", "Belonging", "Integrity"],
   stats: [
-    { number: "50,000+", label: "Meals Served" },
-    { number: "1,200+", label: "Families Helped" },
+    { number: "2000+", label: "Meals Served" },
+    { number: "200+", label: "Families Helped" },
     { number: "150+", label: "Active Volunteers" },
     { number: "25+", label: "Distribution Centers" },
   ],
   image: image1,
 };
 
-const images = import.meta.glob('../assets/image/*.{jpg,jpeg}', {
+const images = import.meta.glob("../assets/image/*.{jpg,jpeg}", {
   eager: true,
-  import: 'default'
+  import: "default",
 });
 
 export const galleryImages = Object.values(images).map((img, index) => ({
   id: index + 1,
   url: img,
   title: `Image ${index + 1}`,
-  description: `Gallery image ${index + 1}`
+  description: `Gallery image ${index + 1}`,
 }));
 
 export const blogPosts = [
@@ -145,51 +144,87 @@ export const testimonials = [
 export const faqs = [
   {
     id: 1,
-    question: "How can I volunteer with Nanakirasoi?",
+    question: "⁠What is Nana Ki Rasoi?",
     answer:
-      "You can register as a volunteer through our Contact page or by visiting our nearest distribution center. We welcome volunteers of all ages and backgrounds. Whether you can spare a few hours a week or a day a month, your contribution makes a difference.",
+      "Nana Ki Rasoi is building dignity-first community kitchens where anyone can access a warm, nutritious meal in a welcoming and respectful space and pay what they can.",
   },
   {
     id: 2,
-    question: "Where does my donation go?",
+    question: "What makes Nana Ki Rasoi different?",
     answer:
-      "100% of your donation goes directly to our food programs. We use funds to purchase ingredients, maintain community kitchens, and operate distribution centers. Our administrative costs are covered by separate grants and corporate partnerships.",
+      "Our focus is on dignity, not charity. We want to create spaces where people can sit, eat, and feel cared for, not stand in line for handouts.",
   },
   {
     id: 3,
-    question: "How many people do you feed daily?",
+    question: "Who can access meals at Nana Ki Rasoi?",
     answer:
-      "On average, we serve over 2,000 meals daily across our 25+ distribution centers. During special drives and festivals, this number can go up to 5,000 meals per day.",
+      "Our vision is to create spaces that are open and welcoming to anyone who needs a meal, without judgment or exclusion.",
   },
   {
     id: 4,
-    question: "Can I donate food or groceries instead of money?",
+    question: "⁠What does “pay what you can” mean?",
     answer:
-      "Yes! We accept non-perishable food items, grains, pulses, and cooking oil at our collection centers. Please contact us beforehand to coordinate the donation and ensure we can store the items properly.",
+      "Those who are able to contribute may do so, while those who cannot are still welcomed and served with the same dignity and care.",
   },
   {
     id: 5,
-    question: "Do you provide meals only in specific areas?",
+    question: " ⁠How does Nana Ki Rasoi help reduce hunger?",
     answer:
-      "We currently operate in 25 locations across major cities. However, we're constantly expanding. If you'd like to start a Nanakirasoi center in your area, please reach out to us through the Contact page.",
+      "We aim to reduce hunger through community kitchens that provide fresh meals in dignified spaces, while also strengthening community care and support.",
   },
   {
     id: 6,
-    question: "How do you ensure food quality and hygiene?",
+    question: "How can I donate or support your work?",
     answer:
-      "Food safety is our top priority. All our kitchens follow strict hygiene protocols, our staff undergo regular health checks, and we only use fresh, quality ingredients. Our facilities are regularly inspected and certified by local health authorities.",
+      "You can support us through financial contributions, in-kind donations, volunteering, partnerships, or by helping spread the word.",
   },
   {
     id: 7,
-    question: "Can I sponsor meals for a specific community or event?",
+    question: "What kinds of donations do you accept?",
     answer:
-      "Absolutely! We offer meal sponsorship programs where you can sponsor daily meals for a week, month, or any duration. You can also sponsor meals for special occasions, festivals, or in memory of loved ones.",
+      "We accept monetary support as well as essentials such as groceries, kitchen supplies, clothing, books, educational materials, and hygiene products, depending on current needs.",
   },
   {
     id: 8,
-    question: "How can my company partner with Nanakirasoi?",
+    question: "⁠How will my donation be used?",
     answer:
-      "We welcome corporate partnerships through CSR programs, employee volunteering initiatives, or sponsorships. Contact us at partnerships@nanakirasoi.org to discuss how we can collaborate.",
+      "Donations support meal preparation, kitchen setup, daily operations, staff support, and other community-responsive initiatives.",
+  },
+  {
+    id: 9,
+    question: "Do you accept food donations?",
+    answer:
+      "Yes, depending on our current requirements and quality standards. We request that food donations be coordinated with us in advance.",
+  },
+  {
+    id: 10,
+    question: " ⁠How do you ensure food quality and safety?",
+    answer:
+      "We are committed to clean preparation practices, careful handling, and responsible sourcing to ensure meals are safe and nutritious.",
+  },
+  {
+    id: 11,
+    question: " ⁠Can I volunteer with Nana Ki Rasoi?",
+    answer:
+      "Yes. We welcome people who want to contribute their time and skills to support our work as we grow.",
+  },
+  {
+    id: 12,
+    question: "Can organizations or businesses collaborate with you?",
+    answer:
+      "Yes. We welcome partnerships through sponsorship, in-kind support, employee volunteering, and other collaborative initiatives.",
+  },
+  {
+    id: 13,
+    question: "Where do you currently operate?",
+    answer:
+      "We are currently focused on building our work in Delhi, with the vision of expanding over time.",
+  },
+  {
+    id: 14,
+    question: "How can I stay updated on your activities?",
+    answer:
+      "You can stay updated through our website and social media channels, where we share stories, milestones, and opportunities to get involved.",
   },
 ];
 
@@ -223,44 +258,44 @@ export const donationOptions = [
 export const programs = [
   {
     id: 1,
-    title: "Daily Meal Distribution",
+    title: "Festival & Seasonal Food Drives",
     description:
-      "Our flagship program serves hot, nutritious meals to homeless individuals and families living below the poverty line. Every day, our volunteers prepare and distribute meals at 25+ locations.",
-    icon: "utensils",
+      "During festivals and other key moments in the year, we organize special food drives to ensure that more people can experience comfort, celebration, and care through a shared meal.",
+    icon: "heart",
   },
   {
     id: 2,
     title: "Community Kitchens",
     description:
-      "We operate community kitchens where volunteers and beneficiaries come together to prepare meals. This fosters dignity, community spirit, and provides employment opportunities.",
+      "We are building welcoming community kitchens where anyone can access a warm, nutritious meal in a space rooted in dignity, respect, and belonging.",
     icon: "home",
   },
   {
     id: 3,
     title: "Mobile Food Vans",
     description:
-      "Our mobile units reach remote areas and underserved communities, ensuring that geography is not a barrier to accessing nutritious food.",
+      "Our mobile food vans are designed to reach communities where access to reliable meals is limited, helping us take food and care directly to people who need it most.",
     icon: "truck",
   },
   {
     id: 4,
-    title: "Festival Food Drives",
+    title: "Community Support Projects",
     description:
-      "During festivals and special occasions, we organize large-scale food distribution drives, spreading joy and ensuring no one is left behind during celebrations.",
-    icon: "heart",
+      "Beyond meals, we hope to support people through small, need-based initiatives such as clothing drives, hygiene support, educational materials, and other essentials.",
+    icon: "utensils",
   },
   {
     id: 5,
-    title: "Nutrition Education",
+    title: "Women-Led Livelihoods",
     description:
-      "We conduct workshops on nutrition, hygiene, and healthy eating habits for beneficiary communities, empowering them with knowledge for better health.",
+      "We want Nana Ki Rasoi to create meaningful livelihood opportunities for women, enabling them to play a central role in running and sustaining community-based food initiatives.",
     icon: "book",
   },
   {
     id: 6,
-    title: "Emergency Relief",
+    title: "Emergency Relief Support",
     description:
-      "During natural disasters and emergencies, our rapid response team provides immediate food relief to affected communities.",
+      "In times of crisis or urgent need, we aim to respond with immediate food support and essential supplies for affected individuals and families.",
     icon: "shield",
   },
 ];

@@ -30,8 +30,8 @@ const Blog = () => {
           </p>
 
           <h2 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
-            Our Latest Articles <br />
-            <span className="text-orange-500">& Resources</span>
+            Stories, Reflections <br />
+            <span className="text-orange-500">& Updates</span>
           </h2>
         </div>
 
