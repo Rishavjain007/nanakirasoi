@@ -11,6 +11,8 @@ import Contact from "./pages/Contact";
 import StoryDetails from "./pages/StoryDetails";
 import Programs from "./pages/Programs";
 import Testimonials from "./pages/Testimonials";
+import TermsConditions from "./pages/TermsConditions";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Faqs from "./pages/Faqs";
 import { Toaster } from "./components/ui/sonner";
 
@@ -18,7 +20,6 @@ function App() {
   return (
     <div className="App min-h-screen flex flex-col">
       <BrowserRouter>
-        
         {/* Header */}
         <Header />
 
@@ -35,6 +36,8 @@ function App() {
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/story" element={<StoryDetails />} />
             <Route path="/faqs" element={<Faqs />} />
+            <Route path="/TermsConditions" element={<TermsConditions />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
 
             {/* Fallback Route */}
             <Route path="*" element={<Home />} />
