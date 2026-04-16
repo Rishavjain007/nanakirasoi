@@ -178,7 +178,8 @@ const Home = () => {
               How Nana Ki Rasoi Works
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We are building a dignity-first model of hunger relief rooted in warm meals, welcoming spaces, and community care.
+              We are building a dignity-first model of hunger relief rooted in
+              warm meals, welcoming spaces, and community care.
             </p>
           </div>
 
@@ -308,7 +309,8 @@ const Home = () => {
               Help Us Build a Place Where No One Eats Alone
             </h2>
             <p className="text-lg sm:text-xl text-orange-100 mb-10 leading-relaxed">
-              Your support helps us serve warm meals with dignity, strengthen communities, and bring care to those who need it most.
+              Your support helps us serve warm meals with dignity, strengthen
+              communities, and bring care to those who need it most.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               {/* Donate Button */}

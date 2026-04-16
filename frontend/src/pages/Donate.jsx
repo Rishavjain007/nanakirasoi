@@ -388,6 +388,9 @@ const Donate = () => {
               description:
                 "You cancelled the payment. Please try again when ready.",
             });
+            setTimeout(() => {
+              window.location.reload();
+            }, 1000);
           },
         },
       };
