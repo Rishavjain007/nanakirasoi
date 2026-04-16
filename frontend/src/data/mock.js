@@ -232,25 +232,25 @@ export const donationOptions = [
   {
     id: 1,
     amount: 500,
-    impact: "Feeds 10 people for one day",
+    impact: "Helps feed 10 people for a day",
     popular: false,
   },
   {
     id: 2,
     amount: 1000,
-    impact: "Provides meals for a family for a week",
+    impact: "Helps feed 20 people for a day",
     popular: true,
   },
   {
     id: 3,
     amount: 2500,
-    impact: "Supports a community kitchen for a day",
+    impact: "Helps feed 50 people for a day",
     popular: false,
   },
   {
     id: 4,
     amount: 5000,
-    impact: "Feeds 100 people for one day",
+    impact: "Helps feed 100 people for a day",
     popular: false,
   },
 ];

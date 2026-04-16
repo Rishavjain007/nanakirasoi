@@ -420,11 +420,10 @@ const Donate = () => {
               </span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Your Support Feeds Hope
+              What Your Support Makes Possible
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-8">
-              Every contribution, big or small, helps us serve nutritious meals
-              to those in need
+              Every donation helps us bring food, care, and community support to more people.
             </p>
 
             {/* Impact Stats */}
@@ -434,15 +433,15 @@ const Donate = () => {
                   ₹50
                 </div>
                 <div className="text-sm text-gray-600">
-                  Feeds 1 person for a day
+                  Helps feed 1 person
                 </div>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-lg">
                 <div className="text-3xl font-bold text-orange-600 mb-2">
-                  ₹1,000
+                  ₹1,500
                 </div>
                 <div className="text-sm text-gray-600">
-                  Provides meals for a family for a week
+                  Helps provide meals to a family for a week
                 </div>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-lg">
@@ -450,7 +449,7 @@ const Donate = () => {
                   ₹5,000
                 </div>
                 <div className="text-sm text-gray-600">
-                  Supports a community kitchen for a day
+                  Contributes toward kitchen operations for a day
                 </div>
               </div>
             </div>
@@ -683,20 +682,19 @@ const Donate = () => {
                   </h4>
                   <div className="space-y-2 text-sm text-gray-600">
                     <p>
-                      <span className="font-semibold">Bank Name:</span> HDFC
-                      Bank
+                      <span className="font-semibold">Bank Name:</span> Axis Bank
                     </p>
                     <p>
                       <span className="font-semibold">Account Name:</span>{" "}
-                      Nanakirasoi Foundation
+                      Nana Ki Rasoi Foundation
                     </p>
                     <p>
                       <span className="font-semibold">Account Number:</span>{" "}
-                      1234567890123456
+                      925010040905885
                     </p>
                     <p>
                       <span className="font-semibold">IFSC Code:</span>{" "}
-                      HDFC0001234
+                      UTIB0004504
                     </p>
                   </div>
                 </CardContent>
@@ -713,10 +711,6 @@ const Donate = () => {
                     <p className="mt-4">
                       Scan the QR code or use the UPI ID above to make your
                       contribution directly.
-                    </p>
-                    <p className="text-xs text-gray-500 mt-2">
-                      Please share payment screenshot at
-                      donations@nanakirasoi.org for receipt
                     </p>
                   </div>
                 </CardContent>
