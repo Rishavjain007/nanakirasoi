@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const TermsConditions = () => {
   const navigate = useNavigate();
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-800 font-[Poppins] py-10 px-4">
+    <div className="min-h-screen bg-gray-100 text-gray-800 font-[Poppins] py-10 px-4 text-justify">
       <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-xl p-8 md:p-10 mt-[4%]">
         <button
           onClick={() => navigate("/blog")}

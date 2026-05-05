@@ -186,25 +186,32 @@ const About = () => {
             <div className="max-w-5xl mx-auto">
               <div className="grid md:grid-cols-1 bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border border-white/40">
                 {/* RIGHT CONTENT */}
-                <div className="p-10 flex flex-col justify-center">
+                <div className="p-10 flex flex-col justify-center text-justify">
                   <span className="bg-orange-100 text-orange-600 px-4 py-1 rounded-full text-sm font-semibold mb-4 w-fit">
                     Founder Note
                   </span>
+
                   <p>
                     Nana Ki Rasoi was born from a deeply personal memory.
                     Growing up, my Nana’s home was a place of warmth, comfort,
                     and quiet abundance. Food was never just food there; it was
                     care, safety, and the unspoken assurance that no matter what
-                    happened, someone was there for you.{" "}
+                    happened, someone was there for you.
                   </p>
-                  <b>“मैं बैठा हूँ ना”</b>
+
+                  {/* Hindi Line Center */}
+                  <p className="text-center font-bold my-3 text-lg">
+                    “मैं बैठा हूँ ना”
+                  </p>
+
                   <p>
                     My Nana’s quiet way of saying, “You’re not alone.” That
                     feeling stayed with me. As I grew older, I began to
                     understand how many people live without that sense of
                     certainty, not just around food, but around care itself.
-                    Hunger is not only about an empty stomach.{" "}
+                    Hunger is not only about an empty stomach.
                   </p>
+
                   <p>
                     It is also about loneliness, instability, and the quiet loss
                     of dignity that comes when basic needs go unmet. Nana Ki
@@ -212,6 +219,7 @@ const About = () => {
                     people had access to; one where support feels human, and no
                     one has to navigate hardship alone.
                   </p>
+
                   <p>
                     What began as a personal memory has become a larger
                     commitment — to build community kitchens where food is

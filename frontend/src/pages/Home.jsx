@@ -90,7 +90,7 @@ const Home = () => {
       {/* Stats Section */}
       <section className="py-12 bg-gradient-to-br from-orange-500 via-orange-600 to-orange-700 shadow-2xl">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8" ref={statsRef}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8" ref={statsRef}>
             {aboutData.stats.map((stat, index) => (
               <div
                 key={index}
@@ -146,7 +146,7 @@ const Home = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-2xl max-w-xs">
+              {/* <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-2xl max-w-xs">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
                     <Users className="w-6 h-6 text-orange-600" />
@@ -158,7 +158,7 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

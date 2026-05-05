@@ -123,12 +123,12 @@ const Donate = () => {
         <body>
           <div class="receipt-container">
             <div class="receipt-header">
-              <h1>🙏 Nanakirasoi Foundation</h1>
-              <p>Official Donation Receipt</p>
+              <h1>Nana Ki Rasoi Foundation</h1>
+              <p>Donation Confirmation</p>
             </div>
             <div class="receipt-body">
               <div class="thankyou-message">
-                ❤️ Thank you for your kindness!
+                ❤️ Thank you for your support!
               </div>
               
               <div class="info-row">
@@ -174,8 +174,7 @@ const Donate = () => {
               </div>
             </div>
             <div class="footer">
-              This is a computer generated receipt.<br />
-              Nanakirasoi Foundation | Feeding Hope, One Meal at a Time.
+              This is a computer-generated donation acknowledgement and is not valid for claiming tax benefits or other official purposes. For an official donation receipt, please send a screenshot of your payment to us on<a href="https://wa.me/+919650914276" target="_blank"><b>WhatsApp at +91 9650914276.</b></a> The official receipt will be issued separately after verification.
             </div>
           </div>
         </body>
@@ -423,7 +422,8 @@ const Donate = () => {
               What Your Support Makes Possible
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-8">
-              Every donation helps us bring food, care, and community support to more people.
+              Every donation helps us bring food, care, and community support to
+              more people.
             </p>
 
             {/* Impact Stats */}
@@ -432,9 +432,7 @@ const Donate = () => {
                 <div className="text-3xl font-bold text-orange-600 mb-2">
                   ₹50
                 </div>
-                <div className="text-sm text-gray-600">
-                  Helps feed 1 person
-                </div>
+                <div className="text-sm text-gray-600">Helps feed 1 person</div>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-lg">
                 <div className="text-3xl font-bold text-orange-600 mb-2">
@@ -666,8 +664,17 @@ const Donate = () => {
                   </Button>
 
                   <p className="text-center text-sm text-gray-500 mt-4">
-                    Your donation is secure and tax-deductible. You'll receive a
-                    receipt via email and download immediately after payment.
+                    Your donation is secure, and eligible donations qualify for
+                    tax benefits under Section 80G. After payment, you will
+                    instantly receive a computer-generated donation confirmation
+                    but this confirmation is NOT valid for claiming tax benefits
+                    or other official purposes. For an official donation
+                    receipt, please send a screenshot of your payment to us on{" "}
+                    <a href="https://wa.me/+919650914276" target="_blank">
+                      <b className="text-black">WhatsApp at +91 9650914276.</b>
+                    </a>{" "}
+                    The official receipt will be shared separately after
+                    verification.
                   </p>
                 </form>
               </CardContent>
@@ -682,11 +689,12 @@ const Donate = () => {
                   </h4>
                   <div className="space-y-2 text-sm text-gray-600">
                     <p>
-                      <span className="font-semibold">Bank Name:</span> Axis Bank
+                      <span className="font-semibold">Bank Name:</span> Axis
+                      Bank
                     </p>
                     <p>
-                      <span className="font-semibold">Account Name:</span>{" "}
-                      Nana Ki Rasoi Foundation
+                      <span className="font-semibold">Account Name:</span> Nana
+                      Ki Rasoi Foundation
                     </p>
                     <p>
                       <span className="font-semibold">Account Number:</span>{" "}
@@ -725,24 +733,24 @@ const Donate = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
-              Why Donate to Nanakirasoi?
+              Why Support Nana Ki Rasoi?
             </h3>
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 {
-                  title: "100% Transparency",
+                  title: "Transparent Use of Funds",
                   description:
-                    "Every rupee is accounted for and used directly for our programs",
+                    "We aim to use donations responsibly and thoughtfully to support our meals, kitchen operations, and community initiatives.",
                 },
                 {
-                  title: "Tax Benefits",
+                  title: "Tax Benefit",
                   description:
-                    "Get 80G tax deduction on your donations as per Indian tax laws",
+                    "Eligible donations can receive tax benefits under Section 80G, as applicable under Indian tax law.",
                 },
                 {
-                  title: "Real Impact",
+                  title: "Meaningful Impact",
                   description:
-                    "See the direct impact of your contribution through regular updates",
+                    "Your support helps us reach more people with food, care, and community support.",
                 },
               ].map((item, index) => (
                 <div key={index} className="text-center">

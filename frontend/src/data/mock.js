@@ -19,8 +19,8 @@ export const aboutData = {
   stats: [
     { number: "2000+", label: "Meals Served" },
     { number: "200+", label: "Families Helped" },
-    { number: "150+", label: "Active Volunteers" },
-    { number: "25+", label: "Distribution Centers" },
+    // { number: "150+", label: "Active Volunteers" },
+    // { number: "25+", label: "Distribution Centers" },
   ],
   image: image1,
 };
@@ -256,26 +256,27 @@ export const donationOptions = [
 ];
 
 export const programs = [
+  
   {
     id: 1,
-    title: "Festival & Seasonal Food Drives",
-    description:
-      "During festivals and other key moments in the year, we organize special food drives to ensure that more people can experience comfort, celebration, and care through a shared meal.",
-    icon: "heart",
-  },
-  {
-    id: 2,
     title: "Community Kitchens",
     description:
       "We are building welcoming community kitchens where anyone can access a warm, nutritious meal in a space rooted in dignity, respect, and belonging.",
     icon: "home",
   },
   {
-    id: 3,
+    id: 2,
     title: "Mobile Food Vans",
     description:
       "Our mobile food vans are designed to reach communities where access to reliable meals is limited, helping us take food and care directly to people who need it most.",
     icon: "truck",
+  },
+  {
+    id: 3,
+    title: "Women-Led Livelihoods",
+    description:
+      "We want Nana Ki Rasoi to create meaningful livelihood opportunities for women, enabling them to play a central role in running and sustaining community-based food initiatives.",
+    icon: "book",
   },
   {
     id: 4,
@@ -286,10 +287,10 @@ export const programs = [
   },
   {
     id: 5,
-    title: "Women-Led Livelihoods",
+    title: "Festival & Seasonal Food Drives",
     description:
-      "We want Nana Ki Rasoi to create meaningful livelihood opportunities for women, enabling them to play a central role in running and sustaining community-based food initiatives.",
-    icon: "book",
+      "During festivals and other key moments in the year, we organize special food drives to ensure that more people can experience comfort, celebration, and care through a shared meal.",
+    icon: "heart",
   },
   {
     id: 6,
@@ -301,13 +302,13 @@ export const programs = [
 ];
 
 export const contactInfo = {
-  email: "contact@nanakirasoi.org",
-  phone: "+91 98765 43210",
-  address: "123 Service Street, Community Center, Mumbai - 400001, India",
+  email: "samira.verma@nkrfoundation.com",
+  phone: "+91 96509 14276",
+  address: "SDS NRI Residency,Tower 4-603,Sector 45,Noida,Uttar Pradesh - 201303",
   socialMedia: {
-    facebook: "https://facebook.com/nanakirasoi",
-    twitter: "https://twitter.com/nanakirasoi",
-    instagram: "https://instagram.com/nanakirasoi",
-    linkedin: "https://linkedin.com/company/nanakirasoi",
+    facebook: "https://facebook.com/nanakirasoiasdf",
+    twitter: "https://twitter.com/nanakirasoiasdf",
+    instagram: "https://instagram.com/nanakirasoiasdf",
+    linkedin: "https://linkedin.com/company/nanakirasoiasdf",
   },
 };

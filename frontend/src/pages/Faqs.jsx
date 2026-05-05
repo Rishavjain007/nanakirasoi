@@ -90,7 +90,7 @@ const Faqs = () => {
                     href="/contact"
                     className="inline-flex items-center justify-center px-8 py-4 bg-white text-orange-600 font-semibold rounded-lg hover:bg-orange-50 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
                   >
-                    Become a Volunteer
+                    Contact Us
                   </a>
                 </div>
               </CardContent>

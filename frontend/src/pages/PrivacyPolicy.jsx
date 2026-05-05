@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const PrivacyPolicy = () => {
   const navigate = useNavigate();
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-800 font-[Poppins] py-10 px-4">
+    <div className="min-h-screen bg-gray-100 text-gray-800 font-[Poppins] py-10 px-4 text-justify">
       <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-xl p-8 md:p-10 mt-[4%]">
         <button
           onClick={() => navigate("/blog")}
@@ -158,7 +158,7 @@ const PrivacyPolicy = () => {
         <p className="font-medium text-orange-600">Nana Ki Rasoi Foundation</p>
         <p>Email: samira.verma@nkrfoundation.com</p>
         <p>Address: [Insert Address]</p>
-        <p>Phone: [Insert Phone]</p>
+        <p>Phone: +91 96509 14276</p>
 
         {/* Section */}
         <h2 className="text-xl font-semibold mb-2 mt-6">
