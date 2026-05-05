@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Heart, Mail, Phone, MapPin } from "lucide-react";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { contactInfo } from "../data/mock";
+import logo from "../assets/image/logo.webp";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -28,17 +29,26 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {/* Brand Section */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center shadow-lg">
-                <Heart className="w-6 h-6 text-white" fill="currentColor" />
+            <Link
+              to="/"
+              className="flex items-center space-x-2 group transition-transform duration-300 hover:scale-105"
+            >
+              <div className="w-12 h-12 rounded-full overflow-hidden bg-white flex items-center justify-center border-2 border-orange-500 shadow-lg">
+                <img
+                  src={logo}
+                  alt="Nanakirasoi Logo"
+                  className="w-full h-full object-contain p-1"
+                />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-bold text-white">
-                  Nanakirasoi
+                <span className="text-xl font-bold leading-tight">
+                  Nana Ki Rasoi
                 </span>
-                <span className="text-xs text-orange-400">Feeding Hope</span>
+                <span className="text-xs text-orange-600 font-medium">
+                  Dignity in Every Meal
+                </span>
               </div>
-            </div>
+            </Link>
             <p className="text-sm text-gray-400 leading-relaxed">
               Community kitchens serving food, dignity, and hope, one meal at a
               time.
