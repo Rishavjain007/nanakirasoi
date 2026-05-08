@@ -226,7 +226,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+     {/* 
+ {/* Testimonials Section */}
       <section className="py-20 md:py-28 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 fade-in-up">
@@ -295,6 +296,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+*/}
 
       {/* CTA Section */}
       <section className="py-20 md:py-28 bg-gradient-to-br from-orange-600 via-orange-500 to-orange-600 relative overflow-hidden">
