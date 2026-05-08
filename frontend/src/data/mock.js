@@ -286,7 +286,7 @@ export const programs = [
 export const contactInfo = {
   email: "samira.verma@nkrfoundation.com",
   phone: "+91 96509 14276",
-  address: "SDS NRI Residency,Tower 4-603,Sector 45,Noida,Uttar Pradesh - 201303",
+  address: "SDS NRI Residency, Tower 4-603, Sector 45, Noida, Uttar Pradesh - 201303",
   socialMedia: {
     facebook: "https://facebook.com/nanakirasoiasdf",
     twitter: "https://twitter.com/nanakirasoiasdf",
