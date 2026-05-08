@@ -87,15 +87,6 @@ export const blogPosts = [
 export const testimonials = [
   {
     id: 1,
-    name: "Sunita Devi",
-    role: "Beneficiary",
-    content:
-      "During the toughest time of my life, Nanakirasoi provided meals for my family. Their kindness and support gave us hope when we had none. I'm forever grateful.",
-    rating: 5,
-    location: "Mumbai",
-  },
-  {
-    id: 2,
     name: "Arjun Mehta",
     role: "Volunteer",
     content:
@@ -104,40 +95,31 @@ export const testimonials = [
     location: "Delhi",
   },
   {
-    id: 3,
+    id: 2,
     name: "Lakshmi Iyer",
     role: "Monthly Donor",
     content:
-      "I've been donating to Nanakirasoi for 2 years. Their transparency and genuine impact on communities make me proud to support their mission.",
+      "I've been donating to Nanakirasoi for regularly. Their transparency and genuine impact on communities make me proud to support their mission.",
     rating: 5,
-    location: "Bangalore",
+    location: "Delhi",
   },
   {
-    id: 4,
+    id: 3,
     name: "Mohammed Ansari",
     role: "Beneficiary",
     content:
       "The respect and dignity with which Nanakirasoi serves food is remarkable. They don't just feed stomachs, they feed souls with compassion.",
     rating: 5,
-    location: "Hyderabad",
+    location: "Delhi",
   },
   {
-    id: 5,
-    name: "Priya Reddy",
-    role: "Corporate Partner",
-    content:
-      "Our company partners with Nanakirasoi for CSR activities. Their organized approach and measurable impact make them an excellent partner.",
-    rating: 5,
-    location: "Pune",
-  },
-  {
-    id: 6,
+    id: 4,
     name: "Ramesh Gupta",
-    role: "Volunteer Coordinator",
+    role: "Volunteer",
     content:
       "I've worked with many NGOs, but Nanakirasoi's dedication to their cause and efficient operations stand out. A truly impactful organization.",
     rating: 5,
-    location: "Chennai",
+    location: "Delhi",
   },
 ];
 
