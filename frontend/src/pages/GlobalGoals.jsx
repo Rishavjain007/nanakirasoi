@@ -22,7 +22,7 @@ const GlobalGoals = () => {
   return (
     <section className="global-goals-section">
       <div className="container">
-        <h2 className="section-title">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-[60px] text-center">
           Our Work Aligns With These Global Goals
         </h2>
 
@@ -44,16 +44,6 @@ const GlobalGoals = () => {
         .container {
           max-width: 1400px;
           margin: 0 auto;
-        }
-
-        .section-title {
-          font-size: clamp(2.5rem, 5vw, 5rem);
-          font-weight: 800;
-          line-height: 1.1;
-          text-align: center;
-          color: #111827;
-          margin-bottom: 60px;
-          letter-spacing: -2px;
         }
 
         .goals-grid {
