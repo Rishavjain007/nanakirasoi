@@ -4,6 +4,7 @@ import { ArrowRight, Heart, Users, Utensils, TrendingUp } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Card, CardContent } from "../components/ui/card";
 import { heroData, aboutData, testimonials } from "../data/mock";
+import GlobalGoals from "./GlobalGoals";
 
 const Home = () => {
   const statsRef = useRef(null);
@@ -226,8 +227,8 @@ const Home = () => {
         </div>
       </section>
 
-     {/* 
- {/* Testimonials Section */}
+      {/* Testimonials Section */}
+      {/* 
       <section className="py-20 md:py-28 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 fade-in-up">
@@ -297,6 +298,9 @@ const Home = () => {
         </div>
       </section>
 */}
+
+      <GlobalGoals />
+
 
       {/* CTA Section */}
       <section className="py-20 md:py-28 bg-gradient-to-br from-orange-600 via-orange-500 to-orange-600 relative overflow-hidden">
