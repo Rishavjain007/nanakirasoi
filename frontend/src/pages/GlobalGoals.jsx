@@ -2,12 +2,12 @@
 import React from "react";
 
 // Import your 6 goal images
-import goal1 from "../assets/image/one.png";
-import goal2 from "../assets/image/four.jpeg";
-import goal3 from "../assets/image/two.png";
-import goal4 from "../assets/image/six.avif";
-import goal5 from "../assets/image/five.jpeg";
-import goal6 from "../assets/image/three.png";
+import goal1 from "../assets/new/one.png";
+import goal2 from "../assets/new/four.jpeg";
+import goal3 from "../assets/new/two.png";
+import goal4 from "../assets/new/six.avif";
+import goal5 from "../assets/new/five.jpeg";
+import goal6 from "../assets/new/three.png";
 
 const goals = [
   { id: 1, image: goal1, alt: "Zero Hunger" },
