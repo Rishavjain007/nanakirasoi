@@ -33,7 +33,7 @@ const Home = () => {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={heroData.image}
+            src="https://ibb.co/JhTNdD8" 
             alt="Nana Ki Rasoi volunteers"
             className="w-full h-full object-cover"
           />
