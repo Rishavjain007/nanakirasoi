@@ -1,4 +1,4 @@
-import Hero from "https://ibb.co/JhTNdD8";
+import Hero from "../assets/image/b3.png";
 export const heroData = {
   title: "Meals With Dignity. Hope On Every Plate.",
   subtitle:
