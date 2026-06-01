@@ -13,7 +13,7 @@ export const heroData = {
 import image1 from "../assets/image/b2.png";
 export const aboutData = {
   mission:
-    "At Nana Ki Rasoi, we are working to build community kitchens where anyone can access a warm, nutritious meal in a space that feels welcoming, respectful, and human. We believe hunger is not just about food; it is also about dignity, comfort, and the need to feel cared for. Our mission is to make hunger relief more humane, one meal at a time.",
+    "At Nana Ki Rasoi, we are working to build community kitchens where anyone can access a warm, nutritious meal in a space that feels welcoming and respectful. We believe hunger is not just about food; it is also about dignity, comfort, and the need to feel cared for. Our mission is to make hunger relief more humane, one meal at a time.",
   vision: " A world where no one has to choose between hunger and dignity.",
   values: ["Compassion", "Dignity", "Community", "Belonging", "Integrity"],
   stats: [

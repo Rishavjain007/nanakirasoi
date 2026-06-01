@@ -41,7 +41,7 @@ const About = () => {
             <div className="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full mb-6 shadow-sm">
               <Utensils className="w-4 h-4 text-orange-600" />
               <span className="text-orange-600 text-sm font-semibold">
-                Why Our Model Works:
+                Why Our Model Works
               </span>
             </div>
           </div>
@@ -187,9 +187,7 @@ const About = () => {
               <div className="grid md:grid-cols-1 bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border border-white/40">
                 {/* RIGHT CONTENT */}
                 <div className="p-10 flex flex-col justify-center text-justify">
-                  <span className="bg-orange-100 text-orange-600 px-4 py-1 rounded-full text-sm font-semibold mb-4 w-fit">
-                    Founder Note
-                  </span>
+                  
 
                   <p>
                     Nana Ki Rasoi was born from a deeply personal memory.

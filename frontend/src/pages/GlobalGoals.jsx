@@ -23,7 +23,7 @@ const GlobalGoals = () => {
     <section className="global-goals-section">
       <div className="container">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-[60px] text-center">
-          Our Work Aligns With These Global Goals
+          Our Work Aligns With These Sustainable Development Goals
         </h2>
 
         <div className="goals-grid">

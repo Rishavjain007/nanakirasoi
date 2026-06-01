@@ -19,8 +19,10 @@ const Donate = () => {
     lastName: "",
     email: "",
     phone: "",
+    permanentAddress: "",
+    aadharNumber: "",
+    panNumber: "",
   });
-
   const { toast } = useToast();
 
   // ✅ RECEIPT FUNCTION - FIXED with better error handling
@@ -158,7 +160,18 @@ const Donate = () => {
                 <div class="info-label">Phone Number</div>
                 <div class="info-value">${data.phone}</div>
               </div>
-              
+              <div class="info-row">
+                <div class="info-label">Permanent Address</div>
+                <div class="info-value">${data.permanentAddress}</div>
+              </div>
+              <div class="info-row">
+                <div class="info-label">AADHAR Number</div>
+                <div class="info-value">${data.aadharNumber}</div>
+              </div>
+              <div class="info-row">
+                <div class="info-label">PAN Number</div>
+                <div class="info-value">${data.panNumber}</div>
+              </div>
               <div class="amount-highlight">
                 <div style="font-size: 0.9rem; margin-bottom: 5px;">Donation Amount</div>
                 <span>₹${data.amount}</span>
@@ -645,6 +658,85 @@ const Donate = () => {
                           required
                         />
                       </div>
+                      <div className="border border-orange-200 rounded-xl p-5 bg-orange-50">
+                        <h4 className="font-semibold text-orange-700 mb-4">
+                          Optional Details for 80G Certificate
+                        </h4>
+
+                        <div className="space-y-4">
+                          <div>
+                            <Label htmlFor="address">
+                              Permanent Address
+                              <span className="text-gray-500 text-sm ml-2">
+                                (Optional)
+                              </span>
+                            </Label>
+                            <Input
+                              id="address"
+                              placeholder="Enter your permanent address"
+                              className="h-11"
+                              value={user.permanentAddress}
+                              onChange={(e) =>
+                                setUser({
+                                  ...user,
+                                  permanentAddress: e.target.value,
+                                })
+                              }
+                            />
+                          </div>
+
+                          <div>
+                            <Label htmlFor="aadhar">
+                              AADHAR Number
+                              <span className="text-gray-500 text-sm ml-2">
+                                (Optional)
+                              </span>
+                            </Label>
+                            <Input
+                              id="aadhar"
+                              type="text"
+                              maxLength={12}
+                              placeholder="Enter 12-digit AADHAR Number"
+                              className="h-11"
+                              value={user.aadharNumber}
+                              onChange={(e) =>
+                                setUser({
+                                  ...user,
+                                  aadharNumber: e.target.value,
+                                })
+                              }
+                            />
+                          </div>
+
+                          <div>
+                            <Label htmlFor="pan">
+                              PAN Number
+                              <span className="text-gray-500 text-sm ml-2">
+                                (Optional)
+                              </span>
+                            </Label>
+                            <Input
+                              id="pan"
+                              type="text"
+                              maxLength={10}
+                              placeholder="ABCDE1234F"
+                              className="h-11 uppercase"
+                              value={user.panNumber}
+                              onChange={(e) =>
+                                setUser({
+                                  ...user,
+                                  panNumber: e.target.value.toUpperCase(),
+                                })
+                              }
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <p className="text-center text-sm text-gray-500 mt-4">
+                        If you wish to claim tax benefits under Section 80G,
+                        please provide the following details. Without them, we
+                        will not be able to issue the necessary tax certificate.
+                      </p>
                     </div>
                   </div>
 
@@ -664,17 +756,15 @@ const Donate = () => {
                   </Button>
 
                   <p className="text-center text-sm text-gray-500 mt-4">
-                    Your donation is secure, and eligible donations qualify for
-                    tax benefits under Section 80G. After payment, you will
-                    instantly receive a computer-generated donation confirmation
-                    but this confirmation is NOT valid for claiming tax benefits
-                    or other official purposes. For an official donation
-                    receipt, please send a screenshot of your payment to us on{" "}
+                    After payment, a computer-generated donation receipt will
+                    instantly be downloaded on your device but this is NOT valid
+                    for claiming tax benefits. For an official donation receipt,
+                    please WhatsApp a copy of the computer-generated receipt + a
+                    screenshot of your payment to
                     <a href="https://wa.me/+919650914276" target="_blank">
                       <b className="text-black">WhatsApp at +91 9650914276.</b>
                     </a>{" "}
-                    The official receipt will be shared separately after
-                    verification.
+                    The official receipt will be shared after verification.
                   </p>
                 </form>
               </CardContent>

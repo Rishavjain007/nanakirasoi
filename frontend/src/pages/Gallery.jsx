@@ -7,7 +7,7 @@ const Gallery = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [currentIndex, setCurrentIndex] = useState(null);
 
-  const imagesPerPage = 10;
+  const imagesPerPage = 9;
 
   // Pagination
   const totalPages = Math.ceil(galleryImages.length / imagesPerPage);
