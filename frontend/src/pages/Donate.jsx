@@ -6,6 +6,7 @@ import { Input } from "../components/ui/input";
 import { Label } from "../components/ui/label";
 import { donationOptions } from "../data/mock";
 import { useToast } from "../hooks/use-toast";
+import amit from '../assets/amit/amit.png'
 
 const Donate = () => {
   const [selectedAmount, setSelectedAmount] = useState(1000);
@@ -760,9 +761,9 @@ const Donate = () => {
                     instantly be downloaded on your device but this is NOT valid
                     for claiming tax benefits. For an official donation receipt,
                     please WhatsApp a copy of the computer-generated receipt + a
-                    screenshot of your payment to
+                    screenshot of your payment to 
                     <a href="https://wa.me/+919650914276" target="_blank">
-                      <b className="text-black">WhatsApp at +91 9650914276.</b>
+                      <b className="text-black"> +91 9650914276.</b>
                     </a>{" "}
                     The official receipt will be shared after verification.
                   </p>
@@ -852,6 +853,127 @@ const Donate = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+      {/* Current Funding Priorities */}
+      <section className="py-20 bg-gradient-to-b from-orange-50 to-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Current Funding Priorities
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              These are the immediate funding needs that will help Nana Ki Rasoi
+              take its next important steps.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Project 1 */}
+            <Card className="overflow-hidden border-none shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+              <div className="relative">
+                <img
+                  src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=1200"
+                  alt="Community Kitchen"
+                  className="w-full h-64 object-cover"
+                />
+                <span className="absolute top-4 left-4 bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold">
+                  Funding Priority
+                </span>
+              </div>
+
+              <CardContent className="p-8">
+                <p className="text-orange-600 font-semibold mb-2">Project 1</p>
+
+                <h3 className="text-3xl font-bold text-gray-900 mb-5">
+                  Help Us Launch Our First Permanent Community Kitchen
+                </h3>
+
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  We are raising <strong>₹20 lakhs</strong> to set up and run
+                  Nana Ki Rasoi’s first permanent community kitchen. This will
+                  cover the cost of establishing the kitchen and supporting
+                  operations for the first <strong>8–10 months</strong>, helping
+                  us create a welcoming space.
+                </p>
+
+                <div className="mb-4">
+                  <div className="flex justify-between text-sm mb-2">
+                    <span className="font-medium">₹8,50,000 Raised</span>
+                    <span>Goal ₹20,00,000</span>
+                  </div>
+
+                  <div className="w-full bg-gray-200 rounded-full h-3">
+                    <div
+                      className="bg-orange-500 h-3 rounded-full"
+                      style={{ width: "42%" }}
+                    ></div>
+                  </div>
+                </div>
+
+                <h4 className="text-2xl font-bold text-orange-600">
+                  Goal: ₹20,00,000
+                </h4>
+              </CardContent>
+            </Card>
+
+            {/* Project 2 */}
+            <Card className="overflow-hidden border-none shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+              <div className="relative">
+                <img
+                  src={amit}
+                  alt="Training Program"
+                  className="w-full h-64 object-contain"
+                />
+                <span className="absolute top-4 left-4 bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold">
+                  Funding Priority
+                </span>
+              </div>
+
+              <CardContent className="p-8">
+                <p className="text-orange-600 font-semibold mb-2">Project 2</p>
+
+                <h3 className="text-3xl font-bold text-gray-900 mb-5">
+                  Help Amit Become Our First Hire
+                </h3>
+
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  Amit Haldar is 30 years old and originally from Murshidabad,
+                  West Bengal. Before coming to the city, he worked as a manual
+                  labourer, and for the past three years, he has been working as
+                  a helper at a local gym.
+                </p>
+
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  We are raising <strong>₹60,000</strong> to support Amit’s
+                  transition into more stable employment. This will help cover
+                  his{" "}
+                  <strong>
+                    English classes, computer training, and a laptop
+                  </strong>
+                  .
+                </p>
+
+                <div className="mb-4">
+                  <div className="flex justify-between text-sm mb-2">
+                    <span className="font-medium">₹25,000 Raised</span>
+                    <span>Goal ₹60,000</span>
+                  </div>
+
+                  <div className="w-full bg-gray-200 rounded-full h-3">
+                    <div
+                      className="bg-orange-500 h-3 rounded-full"
+                      style={{ width: "41%" }}
+                    ></div>
+                  </div>
+                </div>
+
+                <h4 className="text-2xl font-bold text-orange-600">
+                  Goal: ₹60,000
+                </h4>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
