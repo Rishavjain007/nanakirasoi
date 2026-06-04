@@ -6,7 +6,7 @@ import { Input } from "../components/ui/input";
 import { Label } from "../components/ui/label";
 import { donationOptions } from "../data/mock";
 import { useToast } from "../hooks/use-toast";
-import amit from '../assets/amit/amit.png'
+import amit from '../assets/amit/Amit.png'
 
 const Donate = () => {
   const [selectedAmount, setSelectedAmount] = useState(1000);
