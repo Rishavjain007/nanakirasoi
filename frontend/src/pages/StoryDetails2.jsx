@@ -18,7 +18,7 @@ const StoryDetails2 = () => {
           Hunger, History, and the People Indian Policy Does Not See
         </h6>
 
-        <p className="mb-5">
+        <p className="mb-5 italic">
           A woman in rural Jharkhand sits down to eat. Her husband and in-laws
           have already finished. What is left on the plate is not quite enough.
           She is seven months pregnant. This has been her life, and her mother's
@@ -182,7 +182,7 @@ const StoryDetails2 = () => {
           <h3 className="font-bold text-lg text-gray-900">
             Kaushani Chakrabarti
           </h3>
-          <p className="text-gray-500">
+          <p className="text-gray-500 italic">
             Kaushani Chakrabarti is a social impact researcher and consultant
             working at the intersection of gender, agriculture, climate and
             circular economy.
