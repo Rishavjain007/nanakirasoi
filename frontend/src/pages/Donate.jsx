@@ -843,10 +843,12 @@ const Donate = () => {
                       isProcessing ? "opacity-70 cursor-not-allowed" : ""
                     }`}
                   >
-                    <Heart className="w-5 h-5 mr-2" fill="currentColor" />
-                    {isProcessing
-                      ? "Processing..."
-                      : `Donate ₹${customAmount || selectedAmount}`}
+                    <div className="flex items-center justify-center">
+                      <Heart className="w-5 h-5 mr-2" fill="currentColor" />
+                      {isProcessing
+                        ? "Processing..."
+                        : `Donate ₹${customAmount || selectedAmount}`}
+                    </div>
                   </Button>
 
                   <p className="text-center text-sm text-gray-500 mt-4">
