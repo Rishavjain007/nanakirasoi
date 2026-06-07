@@ -12,7 +12,7 @@ import Contact from "./pages/Contact";
 import StoryDetails from "./pages/StoryDetails";
 import StoryDetails2 from "./pages/StoryDetails2";
 import Programs from "./pages/Programs";
-import Testimonials from "./pages/Testimonials";
+// import Testimonials from "./pages/Testimonials";
 import TermsConditions from "./pages/TermsConditions";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Faqs from "./pages/Faqs";
@@ -36,7 +36,7 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/programs" element={<Programs />} />
-            <Route path="/testimonials" element={<Testimonials />} />
+            {/* <Route path="/testimonials" element={<Testimonials />} /> */}
             <Route path="/story" element={<StoryDetails />} />
             <Route path="/story2" element={<StoryDetails2 />} />
             <Route path="/faqs" element={<Faqs />} />

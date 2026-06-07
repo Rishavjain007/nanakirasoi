@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Heart, Users, Utensils, TrendingUp } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Card, CardContent } from "../components/ui/card";
-import { heroData, aboutData, testimonials } from "../data/mock";
+import { heroData, aboutData } from "../data/mock";
+// import { heroData, aboutData, testimonials } from "../data/mock";
 import GlobalGoals from "./GlobalGoals";
 
 const Home = () => {

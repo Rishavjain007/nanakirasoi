@@ -18,7 +18,7 @@ const Footer = () => {
   const supportLinks = [
     { name: "Donate", path: "/donate" },
     { name: "Volunteer", path: "/contact" },
-    { name: "Testimonials", path: "/testimonials" },
+    // { name: "Testimonials", path: "/testimonials" },
     { name: "FAQs", path: "/faqs" },
   ];
 
