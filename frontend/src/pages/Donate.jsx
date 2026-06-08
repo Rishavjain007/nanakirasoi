@@ -189,7 +189,15 @@ const Donate = () => {
               </div>
             </div>
             <div class="footer">
-              This is a computer-generated donation acknowledgement and is not valid for claiming tax benefits or other official purposes. For an official donation receipt, please send a screenshot of your payment to us on<a href="https://wa.me/+919650914276" target="_blank"><b>WhatsApp at +91 9650914276.</b></a> The official receipt will be issued separately after verification.
+              After payment, a computer-generated donation receipt will
+                    instantly be downloaded on your device but this is NOT valid
+                    for claiming tax benefits. For an official donation receipt,
+                    please WhatsApp a copy of the computer-generated receipt + a
+                    screenshot of your payment to
+                    <a href="https://wa.me/+919625460069" target="_blank">
+                      <b className="text-black"> +91 9625460069.</b>
+                    </a>{" "}
+                    The official receipt will be shared after verification.
             </div>
           </div>
         </body>
@@ -491,9 +499,6 @@ const Donate = () => {
                   alt="Community Kitchen"
                   className="w-full h-64 object-contain"
                 />
-                <span className="absolute top-4 left-4 bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold">
-                  Funding Priority
-                </span>
               </div>
 
               <CardContent className="p-8">
@@ -524,9 +529,6 @@ const Donate = () => {
                   alt="Training Program"
                   className="w-full h-64 object-contain"
                 />
-                <span className="absolute top-4 left-4 bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold">
-                  Funding Priority
-                </span>
               </div>
 
               <CardContent className="p-8">
@@ -828,8 +830,8 @@ const Donate = () => {
                       </div>
                       <p className="text-center text-sm text-gray-500 mt-4">
                         If you wish to claim tax benefits under Section 80G,
-                        please provide the following details. Without them, we
-                        will not be able to issue the necessary tax certificate.
+                        please provide the above details. Without them, we will
+                        not be able to issue the necessary tax certificate.
                       </p>
                     </div>
                   </div>

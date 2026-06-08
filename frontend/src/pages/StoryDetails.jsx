@@ -14,7 +14,7 @@ const StoryDetails = () => {
           ← Back to Blog
         </button>
 
-        <h1 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900">
+        <h1 className="text-center underline font-bold mb-8 text-gray-900">
           The Story Behind Nana Ki Rasoi
         </h1>
 

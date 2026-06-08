@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Donation Receipt - Nanakirasoi Foundation</title>
+    <meta charset="UTF-8" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            padding: 2rem;
+            background-color: #f9fafb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .receipt-container {
+            max-width: 700px;
+            width: 100%;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border: 1px solid #ffe4e0;
+        }
+
+        .receipt-header {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            padding: 2rem;
+            text-align: center;
+            color: white;
+        }
+
+        .receipt-header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .receipt-header p {
+            margin: 0.5rem 0 0;
+            opacity: 0.9;
+        }
+
+        .receipt-body {
+            padding: 2rem;
+        }
+
+        .thankyou-message {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #f97316;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px dashed #f0e6e0;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #4b5563;
+        }
+
+        .info-value {
+            color: #1f2937;
+            font-weight: 500;
+        }
+
+        .amount-highlight {
+            background-color: #fff7ed;
+            border-radius: 16px;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            border: 1px solid #ffedd5;
+        }
+
+        .amount-highlight span {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #ea580c;
+        }
+
+        .footer {
+            background-color: #fef2e8;
+            padding: 1rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #9a6b4a;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #ffe4e0;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="receipt-container">
+        <div class="receipt-header">
+            <h1>Nana Ki Rasoi Foundation</h1>
+            <p>Donation Confirmation</p>
+        </div>
+        <div class="receipt-body">
+            <div class="thankyou-message">
+                ❤️ Thank you for your support!
+            </div>
+
+            <div class="info-row">
+                <div class="info-label">Receipt No.</div>
+                <div class="info-value">#NKR-${Date.now().toString().slice(-8)}</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Date</div>
+                <div class="info-value">${data.date}</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Transaction ID</div>
+                <div class="info-value">${data.paymentId}</div>
+            </div>
+
+            <hr />
+
+            <div class="info-row">
+                <div class="info-label">Donor Name</div>
+                <div class="info-value">${data.firstName} ${data.lastName}</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Email Address</div>
+                <div class="info-value">${data.email}</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Phone Number</div>
+                <div class="info-value">${data.phone}</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Permanent Address</div>
+                <div class="info-value">${data.permanentAddress}</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">AADHAR Number</div>
+                <div class="info-value">${data.aadharNumber}</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">PAN Number</div>
+                <div class="info-value">${data.panNumber}</div>
+            </div>
+            <div class="amount-highlight">
+                <div style="font-size: 0.9rem; margin-bottom: 5px;">Donation Amount</div>
+                <span>₹${data.amount}</span>
+            </div>
+
+            <div class="info-row">
+                <div class="info-label">Payment Method</div>
+                <div class="info-value">${data.method || "Online Payment (Razorpay)"}</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Tax Benefit</div>
+                <div class="info-value">80G Certificate Available</div>
+            </div>
+        </div>
+        <div class="footer">
+            After payment, a computer-generated donation receipt will
+            instantly be downloaded on your device but this is NOT valid
+            for claiming tax benefits. For an official donation receipt,
+            please WhatsApp a copy of the computer-generated receipt + a
+            screenshot of your payment to
+            <a href="https://wa.me/+919625460069" target="_blank">
+                <b className="text-black"> +91 9625460069.</b>
+            </a>{" "}
+            The official receipt will be shared after verification.
+        </div>
+    </div>
+</body>
+
+</html>
