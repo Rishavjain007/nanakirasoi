@@ -3,6 +3,7 @@ import { Target, Eye, Award, Users, Utensils, TrendingUp } from "lucide-react";
 import { Card, CardContent } from "../components/ui/card";
 import { aboutData } from "../data/mock";
 import image2 from "../assets/newimg/b4.png";
+import Samira from "../assets/newimg/Samira.png";
 import { useNavigate } from "react-router-dom";
 
 const About = () => {
@@ -184,44 +185,47 @@ const About = () => {
             </div>
 
             <div className="max-w-5xl mx-auto">
-              <div className="grid md:grid-cols-1 bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border border-white/40">
+              <div className="grid md:grid-cols-2 bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border border-white/40">
+                {/* LEFT IMAGE */}
+                <div className="h-full">
+                  <img
+                    src={Samira} // apni image path lagao
+                    alt="Nana Ki Rasoi Founder"
+                    className="w-full h-full object-cover min-h-[500px]"
+                  />
+                </div>
+
                 {/* RIGHT CONTENT */}
                 <div className="p-10 flex flex-col justify-center text-justify">
-                  
-
                   <p>
                     Nana Ki Rasoi was born from a deeply personal memory.
-                    Growing up, my Nana’s home was a place of warmth, comfort,
-                    and quiet abundance. Food was never just food there; it was
-                    care, safety, and the unspoken assurance that no matter what
+                    Growing up, my Nana’s home was a place of warmth and quiet
+                    abundance. Food was never just food there; it was care,
+                    safety, and the unspoken assurance that no matter what
                     happened, someone was there for you.
                   </p>
 
-                  {/* Hindi Line Center */}
-                  <p className="text-center font-bold my-3 text-lg">
-                    “मैं बैठा हूँ ना”
+                  <p className="mt-4">
+                    “मैं बैठा हूँ ना” was my Nana’s quiet way of saying, “You’re
+                    not alone.” That feeling stayed with me.
                   </p>
 
-                  <p>
-                    My Nana’s quiet way of saying, “You’re not alone.” That
-                    feeling stayed with me. As I grew older, I began to
-                    understand how many people live without that sense of
-                    certainty, not just around food, but around care itself.
-                    Hunger is not only about an empty stomach.
+                  <p className="mt-4">
+                    As I grew older, and as I experienced moments of hunger and
+                    uncertainty myself, I began to understand how deeply food is
+                    connected to a sense of security and belonging. Hunger is
+                    not only about an empty stomach. It is also about
+                    loneliness, instability, and the quiet loss of self-worth
+                    that comes when basic needs go unmet.
                   </p>
 
-                  <p>
-                    It is also about loneliness, instability, and the quiet loss
-                    of dignity that comes when basic needs go unmet. Nana Ki
-                    Rasoi is my way of building the kind of world I wish more
-                    people had access to; one where support feels human, and no
-                    one has to navigate hardship alone.
-                  </p>
-
-                  <p>
-                    What began as a personal memory has become a larger
-                    commitment — to build community kitchens where food is
-                    served with dignity, and where no one feels forgotten.
+                  <p className="mt-4">
+                    Nana Ki Rasoi is my way of building the kind of world I wish
+                    more people had access to, one where no one has to navigate
+                    hardship alone. What began as a personal memory has become a
+                    larger commitment — to build community kitchens where anyone
+                    can access a nourishing meal and know that they have not
+                    been forgotten.
                   </p>
                 </div>
               </div>
