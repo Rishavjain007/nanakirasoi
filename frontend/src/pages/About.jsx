@@ -2,7 +2,7 @@ import React from "react";
 import { Target, Eye, Award, Users, Utensils, TrendingUp } from "lucide-react";
 import { Card, CardContent } from "../components/ui/card";
 import { aboutData } from "../data/mock";
-import image2 from "../assets/image/b4.png";
+import image2 from "../assets/newimg/b4.png";
 import { useNavigate } from "react-router-dom";
 
 const About = () => {

@@ -1,8 +1,8 @@
-import Hero from "../assets/image/b3.png";
+import Hero from "../assets/newimg/b3.png";
 export const heroData = {
   title: "Meals With Dignity. Hope On Every Plate.",
   subtitle:
-    "Nana ki Rasoi is a woman-led and run non-profit, creating inclusive community kitchens, where anyone can enjoy a nourishing meal and pay what they can.",
+    "Nana ki Rasoi (“my grandfather’s kitchen”) is a woman-led and run non-profit, creating inclusive community kitchens, where anyone can enjoy a nourishing meal and pay what they can.",
   image: Hero,
   cta: {
     primary: "Donate Now",
@@ -10,7 +10,7 @@ export const heroData = {
   },
 };
 
-import image1 from "../assets/image/b2.png";
+import image1 from "../assets/newimg/b2.png";
 export const aboutData = {
   mission:
     "At Nana Ki Rasoi, we are working to build community kitchens where anyone can access a warm, nutritious meal in a space that feels welcoming and respectful. We believe hunger is not just about food; it is also about dignity, comfort, and the need to feel cared for. Our mission is to make hunger relief more humane, one meal at a time.",
@@ -25,17 +25,23 @@ export const aboutData = {
   image: image1,
 };
 
-const images = import.meta.glob("../assets/image/*.{jpg,jpeg}", {
-  eager: true,
-  import: "default",
-});
+const images = import.meta.glob(
+  "../assets/image/*.{jpg,jpeg,png,webp,gif,svg,JPG,JPEG,PNG,WEBP,GIF,SVG}",
+  {
+    eager: true,
+    import: "default",
+  },
+);
 
-export const galleryImages = Object.values(images).map((img, index) => ({
-  id: index + 1,
-  url: img,
-  title: `Image ${index + 1}`,
-  description: `Gallery image ${index + 1}`,
-}));
+export const galleryImages = Object.values(images)
+  .sort() // serial order maintain karega
+  .map((img, index) => ({
+    id: index + 1,
+    url: img,
+    title: `Image ${index + 1}`,
+    description: `Gallery image ${index + 1}`,
+  }));
+
 
 export const blogPosts = [
   {
@@ -238,7 +244,6 @@ export const donationOptions = [
 ];
 
 export const programs = [
-  
   {
     id: 1,
     title: "Community Kitchens",
@@ -286,10 +291,11 @@ export const programs = [
 export const contactInfo = {
   email: "samira.verma@nkrfoundation.com",
   phone: "+91 96509 14276",
-  address: "SDS NRI Residency, Tower 4-603, Sector 45, Noida, Uttar Pradesh - 201303",
+  address:
+    "SDS NRI Residency, Tower 4-603, Sector 45, Noida, Uttar Pradesh - 201303",
   socialMedia: {
     facebook: "https://facebook.com/nanakirasoiasdf",
-    twitter: "https://twitter.com/nanakirasoiasdf",
+    whatsapp: "https://wa.me/+919625460069",
     instagram: "https://instagram.com/nanakirasoiasdf",
     linkedin: "https://linkedin.com/company/nanakirasoiasdf",
   },

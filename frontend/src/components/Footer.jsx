@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Heart, Mail, Phone, MapPin } from "lucide-react";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaWhatsapp, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { contactInfo } from "../data/mock";
-import logo from "../assets/image/logo.webp";
+import logo from "../assets/newimg/logo.webp";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -65,13 +65,13 @@ const Footer = () => {
                 <FaFacebook className="w-5 h-5" />
               </a>
               <a
-                href={contactInfo.socialMedia.twitter}
+                href={contactInfo.socialMedia.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-gray-800 hover:bg-orange-600 flex items-center justify-center transition-all duration-300 hover:scale-110"
-                aria-label="Twitter"
+                aria-label="Whatsapp"
               >
-                <FaTwitter className="w-5 h-5" />
+                <FaWhatsapp className="w-5 h-5" />
               </a>
               <a
                 href={contactInfo.socialMedia.instagram}

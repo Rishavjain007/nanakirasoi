@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Heart } from "lucide-react";
 import { Button } from "./ui/button";
-import logo from "../assets/image/logo.webp";
+import logo from "../assets/newimg/logo.webp";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -126,7 +126,7 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
                 className="mt-2"
               >
-                <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white shadow-lg">
+                <Button className="flex items-center justify-center w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white shadow-lg">
                   <Heart className="w-4 h-4 mr-2" fill="currentColor" />
                   Donate Now
                 </Button>
