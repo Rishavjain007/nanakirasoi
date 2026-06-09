@@ -38,10 +38,10 @@ const StoryDetails = () => {
           awaited summer vacations when I could eat her food for days on end.
           But what surprised and delighted me was that my{" "}
           <span className="italic">Nana</span> was an even better cook! So was
-          my
-          <span className="italic">Dadaji</span>. Long before I had the language
-          for feminism, watching these men cook, care, and nourish felt quietly
-          radical. They showed me that care was not gendered, it was human.
+          my <span className="italic">Dadaji</span>. Long before I had the
+          language for feminism, watching these men cook, care, and nourish felt
+          quietly radical. They showed me that care was not gendered, it was
+          human.
         </p>
 
         <p className="mb-5">
