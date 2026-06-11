@@ -2,7 +2,7 @@ import Hero from "../assets/newimg/b3.png";
 export const heroData = {
   title: "Meals With Dignity. Hope On Every Plate.",
   subtitle:
-    "Nana ki Rasoi (“my grandfather’s kitchen”) is a woman-led and run non-profit, creating inclusive community kitchens, where anyone can enjoy a nourishing meal and pay what they can.",
+    "Nana Ki Rasoi (“My Grandfather’s Kitchen”) is a woman-led and run non-profit, creating inclusive community kitchens, where anyone can enjoy a nourishing meal and pay what they can.",
   image: Hero,
   cta: {
     primary: "Donate Now",
