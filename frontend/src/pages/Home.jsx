@@ -6,6 +6,11 @@ import { Card, CardContent } from "../components/ui/card";
 import { heroData, aboutData } from "../data/mock";
 // import { heroData, aboutData, testimonials } from "../data/mock";
 import GlobalGoals from "./GlobalGoals";
+import MCA from "../assets/OurRegistrations&Compliance/MCA.jpeg";
+import DPIIT from "../assets/OurRegistrations&Compliance/DPIIT.png";
+import MSME from "../assets/OurRegistrations&Compliance/MSME.avif";
+import NGODarpan from "../assets/OurRegistrations&Compliance/Ngo_Darpan_1746189558.jpeg";
+import EightyG from "../assets/OurRegistrations&Compliance/80g-and-12a.jpeg";
 
 const Home = () => {
   const statsRef = useRef(null);
@@ -33,7 +38,8 @@ const Home = () => {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src="https://i.ibb.co/R5K1SRt/file-00000000a81c71fa86276e6e567b56d4.png"
+          <img
+            src="https://i.ibb.co/R5K1SRt/file-00000000a81c71fa86276e6e567b56d4.png"
             alt="Nana Ki Rasoi volunteers"
             className="w-full h-full object-cover"
           />
@@ -301,6 +307,73 @@ const Home = () => {
 
       <GlobalGoals />
 
+      {/* Registrations & Compliance Section */}
+      <section className="py-20 md:py-24 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Our Registrations & Compliance
+            </h2>
+
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Nana Ki Rasoi is registered and compliant with all legal and
+              regulatory requirements.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16">
+            {/* MCA */}
+            <div className="group">
+              <img
+                src={MCA}
+                alt="MCA Registration"
+                className="h-20 md:h-24 object-contain transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+
+            {/* DPIIT */}
+            <div className="group">
+              <img
+                src={DPIIT}
+                alt="DPIIT Recognition"
+                className="h-20 md:h-24 object-contain transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+
+            {/* MSME */}
+            <div className="group">
+              <img
+                src={MSME}
+                alt="MSME Registration"
+                className="h-20 md:h-24 object-contain transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+
+            {/* NGO Darpan */}
+            <div className="group">
+              <img
+                src={NGODarpan}
+                alt="NGO Darpan"
+                className="h-20 md:h-24 object-contain transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+
+            {/* 80G */}
+            <div className="group">
+              <img
+                src={EightyG}
+                alt="80G Certification"
+                className="h-20 md:h-24 object-contain transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+
+            {/* Future ISO Certificate */}
+            {/* <div className="w-24 md:w-28 lg:w-32 opacity-0 pointer-events-none">
+              Placeholder
+            </div> */}
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 md:py-28 bg-gradient-to-br from-orange-600 via-orange-500 to-orange-600 relative overflow-hidden">
