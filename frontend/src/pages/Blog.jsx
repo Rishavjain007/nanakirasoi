@@ -73,7 +73,7 @@ const Blog = () => {
             </div>
 
             {/* STORY 2 */}
-            <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border border-white/40 hover:-translate-y-2 transition duration-300">
+            {/*<div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border border-white/40 hover:-translate-y-2 transition duration-300">
               <div className="h-72 overflow-hidden">
                 <img
                   src={blog2image}
@@ -102,7 +102,7 @@ const Blog = () => {
                   Read Story →
                 </button>
               </div>
-            </div>
+            </div>*/}
           </div>
         </div>
       </div>
