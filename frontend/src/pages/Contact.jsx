@@ -249,6 +249,11 @@ const Contact = () => {
                 <p className="text-gray-600 text-sm mt-2">
                   {contactInfo.address}
                 </p>
+                <p className="text-red-700 text-[0.8rem]">
+                  Please note: This is our registered office address. Nana Ki
+                  Rasoi’s permanent community kitchen is currently being set up,
+                  and its location will be shared once operational.
+                </p>
               </div>
             </div>
           </Card>

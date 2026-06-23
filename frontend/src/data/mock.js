@@ -42,7 +42,6 @@ export const galleryImages = Object.values(images)
     description: `Gallery image ${index + 1}`,
   }));
 
-
 export const blogPosts = [
   {
     id: 1,
@@ -219,26 +218,22 @@ export const faqs = [
 export const donationOptions = [
   {
     id: 1,
-    amount: 500,
-    impact: "Helps feed 10 people for a day",
+    amount: "1000",
     popular: false,
   },
   {
     id: 2,
-    amount: 1000,
-    impact: "Helps feed 20 people for a day",
+    amount: "2500",
     popular: true,
   },
   {
     id: 3,
-    amount: 2500,
-    impact: "Helps feed 50 people for a day",
+    amount: "5000",
     popular: false,
   },
   {
     id: 4,
-    amount: 5000,
-    impact: "Helps feed 100 people for a day",
+    amount: "10,000",
     popular: false,
   },
 ];
@@ -292,7 +287,7 @@ export const contactInfo = {
   email: "samira.verma@nkrfoundation.com",
   phone: "+91 96509 14276",
   address:
-    "SDS NRI Residency, Tower 4-603, Sector 45, Noida, Uttar Pradesh - 201303",
+    "Registered Office: SDS NRI Residency, Tower 4-603, Sector 45, Noida, Uttar Pradesh - 201303",
   socialMedia: {
     facebook: "https://facebook.com/nanakirasoiasdf",
     whatsapp: "https://wa.me/+919625460069",

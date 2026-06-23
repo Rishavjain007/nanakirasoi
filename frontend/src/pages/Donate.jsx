@@ -593,9 +593,6 @@ const Donate = () => {
                           <div className="text-2xl font-bold text-gray-900 mb-2">
                             ₹{option.amount}
                           </div>
-                          <div className="text-xs text-gray-600 leading-tight">
-                            {option.impact}
-                          </div>
                           {selectedAmount === option.amount &&
                             !customAmount && (
                               <div className="absolute top-3 right-3">
@@ -861,7 +858,8 @@ const Donate = () => {
             </Card>
 
             {/* Additional Information */}
-            <div className="mt-12 grid md:grid-cols-2 gap-6">
+            {/* <div className="mt-12 grid gap-6"> */}
+            <div className="mt-12 grid justify-center">
               <Card className="border-none shadow-lg">
                 <CardContent className="p-6">
                   <h4 className="font-bold text-gray-900 mb-3">
@@ -883,22 +881,6 @@ const Donate = () => {
                     <p>
                       <span className="font-semibold">IFSC Code:</span>{" "}
                       UTIB0004504
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="border-none shadow-lg">
-                <CardContent className="p-6">
-                  <h4 className="font-bold text-gray-900 mb-3">UPI Payment</h4>
-                  <div className="space-y-2 text-sm text-gray-600">
-                    <p>
-                      <span className="font-semibold">UPI ID:</span>{" "}
-                      nanakirasoi@upi
-                    </p>
-                    <p className="mt-4">
-                      Scan the QR code or use the UPI ID above to make your
-                      contribution directly.
                     </p>
                   </div>
                 </CardContent>
