@@ -227,6 +227,18 @@ const About = () => {
                     can access a nourishing meal and know that they have not
                     been forgotten.
                   </p>
+{/* Founder Signature */}
+<div className="mt-8">
+  <div className="w-24 h-1 bg-orange-500 rounded-full mb-3"></div>
+
+  <h4 className="text-xl font-bold text-gray-900">
+    Dr. Samira Verma
+  </h4>
+
+  <p className="text-sm text-gray-500 tracking-wide">
+    Founder, Nana Ki Rasoi
+  </p>
+</div>
                 </div>
               </div>
             </div>
