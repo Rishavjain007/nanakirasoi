@@ -234,10 +234,6 @@ const About = () => {
   <h4 className="text-xl font-bold text-gray-900">
     Dr. Samira Verma
   </h4>
-
-  <p className="text-sm text-gray-500 tracking-wide">
-    Founder, Nana Ki Rasoi
-  </p>
 </div>
                 </div>
               </div>
