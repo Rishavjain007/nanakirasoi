@@ -1,6 +1,7 @@
 import React from "react";
 import image1 from "../assets/newimg/b2.png";
 import image2 from "../assets/newimg/b4.png";
+import image3 from "../assets/newimg/Blog2-image.jpeg";
 import { useNavigate } from "react-router-dom";
 
 const Blog = () => {
@@ -34,9 +35,10 @@ const Blog = () => {
           </h2>
         </div>
 
-        {/* CENTERED STORY CARD */}
-        <div className="max-w-7xl mx-auto flex justify-center">
-          <div className="w-full max-w-2xl bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border border-white/40 hover:-translate-y-2 transition duration-300">
+        {/* BLOG CARDS */}
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+          {/* Card 1 */}
+          <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border border-white/40 hover:-translate-y-2 transition duration-300">
             <div className="h-72 overflow-hidden">
               <img
                 src={image2}
@@ -56,6 +58,31 @@ const Blog = () => {
                 className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-semibold transition shadow-md hover:scale-105"
               >
                 Read Story →
+              </button>
+            </div>
+          </div>
+
+          {/* Card 2 */}
+          <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border border-white/40 hover:-translate-y-2 transition duration-300">
+            <div className="h-72 overflow-hidden">
+              <img
+                src={image3}
+                alt="Latest Updates"
+                className="w-full h-full object-cover hover:scale-110 transition duration-500"
+              />
+            </div>
+
+            <div className="p-8">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                The Arithmetic{" "}
+                <span className="text-orange-500">of Hunger</span>
+              </h3>
+
+              <button
+                onClick={() => navigate("/story2")}
+                className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-semibold transition shadow-md hover:scale-105"
+              >
+                Read More →
               </button>
             </div>
           </div>
