@@ -224,7 +224,7 @@ export const donationOptions = [
   {
     id: 2,
     amount: "2500",
-    popular: true,
+    popular: false,
   },
   {
     id: 3,
@@ -234,7 +234,7 @@ export const donationOptions = [
   {
     id: 4,
     amount: "10,000",
-    popular: false,
+    popular: true,
   },
 ];
 
