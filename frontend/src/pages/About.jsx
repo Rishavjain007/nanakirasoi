@@ -96,7 +96,7 @@ const About = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-10 md:py-28 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
             <div className="relative h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
@@ -135,7 +135,7 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-10 md:py-28 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 bg-orange-100 px-4 py-2 rounded-full mb-6">
@@ -157,15 +157,26 @@ const About = () => {
             {aboutData.values.map((value, index) => (
               <Card
                 key={index}
-                className="border-2 border-orange-200 hover:border-orange-400 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl bg-gradient-to-br from-white to-orange-50/20"
+                className="group relative overflow-hidden h-72 rounded-2xl border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
               >
-                <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                    <span className="text-2xl font-bold text-white">
-                      {value.charAt(0)}
-                    </span>
+                {/* Background Image */}
+                <img
+                  src={value.image}
+                  alt={value.title}
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+
+                {/* Dark Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 group-hover:from-orange-900/70 transition-all duration-500" />
+
+                <CardContent className="relative z-10 h-full flex flex-col items-center justify-center text-center p-6">
+                  <div className="w-16 h-16 rounded-full bg-orange-500 flex items-center justify-center text-white text-2xl font-bold shadow-xl mb-5">
+                    {value.title.charAt(0)}
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900">{value}</h3>
+
+                  <h3 className="text-2xl font-bold text-white">
+                    {value.title}
+                  </h3>
                 </CardContent>
               </Card>
             ))}

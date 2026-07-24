@@ -11,17 +11,46 @@ export const heroData = {
 };
 
 import image1 from "../assets/newimg/b2.png";
+import compassionImg from "../assets/newimg/compasion.jpeg";
+import dignityImg from "../assets/newimg/Dignity.jpeg";
+import communityImg from "../assets/newimg/community.jpeg";
+import belongingImg from "../assets/newimg/belonging.jpeg";
+import integrityImg from "../assets/newimg/Integrity.jpeg";
+
 export const aboutData = {
   mission:
     "At Nana Ki Rasoi, we are working to build community kitchens where anyone can access a warm, nutritious meal in a space that feels welcoming and respectful. We believe hunger is not just about food; it is also about dignity, comfort, and the need to feel cared for. Our mission is to make hunger relief more humane, one meal at a time.",
-  vision: " A world where no one has to choose between hunger and dignity.",
-  values: ["Compassion", "Dignity", "Community", "Belonging", "Integrity"],
+
+  vision: "A world where no one has to choose between hunger and dignity.",
+
+  values: [
+    {
+      title: "Compassion",
+      image: compassionImg,
+    },
+    {
+      title: "Dignity",
+      image: dignityImg,
+    },
+    {
+      title: "Community",
+      image: communityImg,
+    },
+    {
+      title: "Belonging",
+      image: belongingImg,
+    },
+    {
+      title: "Integrity",
+      image: integrityImg,
+    },
+  ],
+
   stats: [
     { number: "2000+", label: "Meals Served" },
     { number: "200+", label: "Families Helped" },
-    // { number: "150+", label: "Active Volunteers" },
-    // { number: "25+", label: "Distribution Centers" },
   ],
+
   image: image1,
 };
 
